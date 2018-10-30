@@ -1,4 +1,4 @@
-package com.example.android.pets;
+package com.example.android.pets.data;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -24,10 +24,10 @@ public class PetDbHelper extends SQLiteOpenHelper {
 
         String SQL_CREATE_PETS_TABLE = "CREATE TABLE " + PetsEntry.TABLE_NAME + " ("
                 + PetsEntry._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + PetsEntry.COLUMN_PET_NAME + "TEXT NOT NULL, "
-                + PetsEntry.COLUMN_PET_BREED + "TEXT, "
-                + PetsEntry.COLUMN_PET_GENDER + "INTEGER NOT NULL, "
-                + PetsEntry.COLUMN_PET_WEIGHT + " INTEGER NOT NULL DEFAULT 0" + ");";
+                + PetsEntry.COLUMN_PET_NAME + " TEXT NOT NULL, "
+                + PetsEntry.COLUMN_PET_BREED + " TEXT, "
+                + PetsEntry.COLUMN_PET_GENDER + " INTEGER NOT NULL, "
+                + PetsEntry.COLUMN_PET_WEIGHT + " INTEGER NOT NULL DEFAULT 0);";
 
         // Execute the SQL statement
         db.execSQL(SQL_CREATE_PETS_TABLE);

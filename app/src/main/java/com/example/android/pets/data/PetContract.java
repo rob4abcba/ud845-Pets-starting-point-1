@@ -4,9 +4,10 @@ import android.provider.BaseColumns;
 
 public final class PetContract {
 
-    private PetContract() {}
+    private PetContract() {
+    }
 
-    public static final class PetsEntry implements BaseColumns{
+    public static final class PetsEntry implements BaseColumns {
 
         //Name of the table the data is being taken from.
         public static final String TABLE_NAME = "pets";
